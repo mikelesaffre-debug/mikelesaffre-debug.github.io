@@ -7,26 +7,58 @@
         <style>
             /* Dit gaan we de komende dagen samen invullen */
             body {
-                font-family: Arial, sans-serif;
-                background: #f8f8f8;
+                font-family: 'segoe UI', Arial, sans-serif;
+                background: #f9f9f9;
                 color: #333;
                 margin: 0;
-                padding: 0;
+                line-height: 1.6;
             }
             header {
-                background: #333;
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070') center/cover;
                 color: white;
                 text-align: center;
-                padding: 60px 20px;
+                padding: 120px 20px 80px;
             }
             h1 {
-                font-size: 48pc;
+                font-size: 52px;
+                font-weight: 300;
+                letter-spacing: 3px;
                 margin: 0;
+            }
+            header p {
+                font-size: 20px;
+                opacity: 0.9;
+                margin-top: 10px;
             }
             .container {
                 max-width: 900px;
-                margin: 40px auto;
+                margin: 50px auto;
                 padding: 0 20px;
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 30px;
+                color: #222;
+                text-align: center;
+            }
+            .gerecht{
+                background: white;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 12px;
+                box-shadow: 0 5px rgba(0,0,0,0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .gerecht h3 {
+                margin: 0;
+                font-size: 20px;
+            }
+            .prijs {
+                color: #c00;
+                font-weight: bold;
+                font-size: 20px;
             }
         </style>
     </head>
@@ -38,8 +70,22 @@
         </header>
 
         <div class="container">
-            <h2>Onze kaart</h2>
-            <!-- Hier komen straks de gerechten-->
+            <h2>Voorgerechten</h2>
+            
+            <div class="gerecht">
+                <h3>Tomatensoep met balletjes</h3>
+                <div class="prijs">€ 7,50</div>
+            </div>
+
+            <div class="gerecht">
+                <h3>Carpaccio van rund</h3>
+                <div class="prijs">€ 12,00</div>
+            </div>
+
+            <div class="gerecht">
+                <h3>Garnaalkroketten (2 stuks)</h3>
+                <div class="prijs">€ 14,00</div>
+            </div>
         </div>
     </body>
 </html>
