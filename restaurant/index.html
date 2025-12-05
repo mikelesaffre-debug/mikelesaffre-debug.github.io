@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Brasserie Mike - Menu</title>
+        <title>Brasserie Demo - Jasmik</title>
         <style>
             body {
                 margin: 0;
@@ -11,11 +11,17 @@
                 background: #f4f4f4;
                 color: #333;
             }
-            header {
-                 background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2070') center/cover no-repeat fixed;
-                 color: white;
-                 text-align: center;
-                  padding: 140px 20px 80px;
+        header {
+                padding-top: 100px;
+                background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+                color: white;
+                text-align: center;
+                padding: 180px 20px 120px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             }
             }
@@ -68,10 +74,16 @@
         </style>
     </head>
     <body>
-
+        <nav style="position:fixed;top:0;width:100%;background:rgba(0,0,0,0.9);padding:15px 0;z-index:1000;">
+            <div style="max-width:1000px;margin:0 auto;text-align:center;">
+            <a href="/" style="color:white;text-decoration:none;margin:0 30px;font-weight:bold;font-size:16px;">🏠 Home</a>
+            <a href="/restaurant" style="color:white;text-decoration:none;margin:0 30px;font-weight:bold;font-size:16px;">🍽️ Menu</a>
+            <a href="mailto:info@jasmik.be" style="color:white;text-decoration:none;margin:0 30px;font-weight:bold;font-size:16px;">✉️ Contact</a>
+     </div>
+    </nav>
         <header>
-            <h1>Brasserie Mike</h1>
-            <p>Verse gerechten - Dagelijks open</p>
+            <h1>Brasserie Demo – Jasmik</h1>
+            <p>Voorbeeldwebsite – volledig hand-coded</p>
         </header>
 
         <div class="container">
@@ -91,6 +103,21 @@
                 <h3>Garnaalkroketten (2 stuks)</h3>
                 <div class="prijs">€ 14,00</div>
             </div>
+            <h2 style="margin-top:80px;">Hoofdgerechten</h2>
+                <div class="gerecht"><h3>Steak frites</h3><div class="prijs">€ 26</div></div>
+                <div class="gerecht"><h3>Vispotje chef</h3><div class="prijs">€ 29</div></div>
+                <div class="gerecht"><h3>Vegetarische pasta</h3><div class="prijs">€ 19</div></div>
+
+            <h2 style="margin-top:80px;">Desserts</h2>
+                <div class="gerecht"><h3>Crème brûlée</h3><div class="prijs">€ 9</div></div>
+                <div class="gerecht"><h3>Dame blanche</h3><div class="prijs">€ 8,50</div></div>
         </div>
+        <footer style="background:#111;color:white;text-align:center;padding:60px 20px;margin-top:100px;">
+  <div style="max-width:1000px;margin:0 auto;">
+    <p style="font-size:18px;margin:10px 0;">Jasmik Webdesign</p>
+    <p style="font-size:14px;margin:5px 0;">info@jasmik.be | Zelfstandige in bijberoep</p>
+    <p style="font-size:12px;margin:20px 0;color:#888;">&copy; 2025 – Alle demo's 100% hand-coded</p>
+  </div>
+</footer>
     </body>
 </html>
