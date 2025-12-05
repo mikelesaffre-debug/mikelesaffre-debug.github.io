@@ -71,6 +71,46 @@
                 font-weight: bold;
                 font-size: 22px;
             }
+            .reservatie-section {
+                background: white;
+                padding: 60px 40px;
+                margin: 80px 0;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .reservatie-section h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 32px;
+            }
+            .form-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            .form-grid-div {
+                grid-column: span 2;
+            }
+            .form-grid .full {
+                grid-column: 1 / -1;
+            }
+            input, select, textarea {
+                width: 100%;
+                padding: 14px;
+                border: 1px solid #ddd;
+                border-radius: 50px;
+                font-weight: bold;
+                font-size: 18px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .reservatie-btn:hover {
+                background: #b71c1c;
+                transform: translateY(-3px);
+            }
         </style>
     </head>
     <body>
@@ -112,10 +152,59 @@
                 <div class="gerecht"><h3>Crème brûlée</h3><div class="prijs">€ 9</div></div>
                 <div class="gerecht"><h3>Dame blanche</h3><div class="prijs">€ 8,50</div></div>
         </div>
+       <div class="reservatie-section">
+  <h2>Reserveer een tafel</h2>
+  <form action="https://formspree.io/f/JOUW_FORMSPREE_CODE" method="POST">
+    <div class="form-grid">
+      <div>
+        <label>Naam</label>
+        <input type="text" name="naam" required>
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label>Datum</label>
+        <input type="date" name="datum" required>
+      </div>
+      <div>
+        <label>Tijd</label>
+        <select name="tijd" required>
+          <option value="">Kies een tijd</option>
+          <option>18:00</option>
+          <option>18:30</option>
+          <option>19:00</option>
+          <option>19:30</option>
+          <option>20:00</option>
+          <option>20:30</option>
+          <option>21:00</option>
+        </select>
+      </div>
+      <div>
+        <label>Aantal personen</label>
+        <input type="number" name="aantal" min="1" max="20" value="2" required>
+      </div>
+      <div class="full">
+        <label>Opmerkingen (allergieën, kinderstoel, etc.)</label>
+        <textarea name="opmerkingen" placeholder="Optioneel"></textarea>
+      </div>
+      <div class="full" style="text-align:center;">
+        <button type="submit" class="reservatie-btn">Reservatie versturen</button>
+      </div>
+      <div style="text-align:center; margin: 60px 0;">
+  <h3>Onze locatie</h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.123!2d4.402464!3d51.219448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6d6e6e6e6e6%3A0x6e6e6e6e6e6e6e6e!2sAntwerpen!5e0!3m2!1snl!2sbe!4v1700000000000" width="100%" height="450" style="border:0; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
+  <p style="margin-top:20px;">Grote Markt 1, 2000 Antwerpen</p>
+</div>
+    </div>
+  </form>
+</div>
+            </form>
         <footer style="background:#111;color:white;text-align:center;padding:60px 20px;margin-top:100px;">
   <div style="max-width:1000px;margin:0 auto;">
     <p style="font-size:18px;margin:10px 0;">Jasmik Webdesign</p>
-    <p style="font-size:14px;margin:5px 0;">info@jasmik.be | Zelfstandige in bijberoep</p>
+    <p style="font-size:14px;margin:5px 0;">jasmik.comm.v@gmail.com | Zelfstandige in bijberoep</p>
     <p style="font-size:12px;margin:20px 0;color:#888;">&copy; 2025 – Alle demo's 100% hand-coded</p>
   </div>
 </footer>
